@@ -14,15 +14,3 @@ function cutegorysAndElements() {
   }
 }
 cutegorysAndElements();
-
-// function cutegorysName() {
-//   for (let i = 0; i < itemNameEl.length; i += 1) {
-//     console.log(`Cutegory: ${itemNameEl[i].textContent}`);
-//   }
-// }
-// cutegorysName();
-
-//   for (let x = 0; x < itemEl.length; x += 1) {
-//     const itemLength = itemEl[x].lastElementChild.children.length;
-//     console.log(itemLength);
-//   }
