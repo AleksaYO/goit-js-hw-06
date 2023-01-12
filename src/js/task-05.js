@@ -1,20 +1,21 @@
-const input = document.querySelector("#name-input");
-const text = document.querySelector("#name-output");
-input.style.outline = "transparent";
+const refs = {
+  input: document.querySelector("#name-input"),
+  text: document.querySelector("#name-output"),
+  body: document.querySelector("body"),
+  title: document.querySelector("h1"),
+};
+refs.input.style.outline = "transparent";
 
-const body = document.querySelector("body");
-const title = body.querySelector("h1");
-
-input.addEventListener("input", onTextChanger);
+refs.input.addEventListener("input", onTextChanger);
 
 function onTextChanger(event) {
   if (event.currentTarget.value === "") {
-    text.textContent = "Anonymous";
-    title.style.color = "white";
+    refs.text.textContent = "Anonymous";
+    refs.title.style.color = "white";
   } else {
-    text.textContent = input.value;
-    title.style.color = "tomato";
-    body.style.backgroundColor = "pink";
-    input.style.backgroundColor = "transparent";
+    refs.text.textContent = refs.input.value;
+    refs.title.style.color = "tomato";
+    refs.body.style.backgroundColor = "pink";
+    refs.input.style.backgroundColor = "transparent";
   }
 }

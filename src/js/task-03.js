@@ -34,6 +34,5 @@ for (let i = 0; i < images.length; i += 1) {
   imageEl.width = 320;
   imageEl.style.display = "block";
   imageEl.style.borderRadius = "18px";
-
-  console.log(listEl);
 }
+console.log(listEl);

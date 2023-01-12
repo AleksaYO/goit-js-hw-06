@@ -14,7 +14,7 @@ function createItemEl() {
     itemEl.classList = "item";
     itemEl.textContent = ingredients[i];
     listEl.appendChild(itemEl);
-    console.log(listEl);
   }
+  console.log(listEl);
 }
 createItemEl();
