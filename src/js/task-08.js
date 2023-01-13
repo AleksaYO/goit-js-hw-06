@@ -20,4 +20,5 @@ function formSubmit(event) {
   ) {
     console.log(`Login: ${email.value}, Password: ${password.value}`);
   }
+  event.currentTarget.reset();
 }
