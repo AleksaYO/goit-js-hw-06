@@ -19,6 +19,6 @@ function formSubmit(event) {
     refs.inputPassword.value === password.value
   ) {
     console.log(`Login: ${email.value}, Password: ${password.value}`);
+    event.currentTarget.reset();
   }
-  event.currentTarget.reset();
 }

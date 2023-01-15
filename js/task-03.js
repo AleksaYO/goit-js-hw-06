@@ -14,25 +14,37 @@ const images = [
 ];
 const listEl = document.querySelector(".gallery");
 
-for (let i = 0; i < images.length; i += 1) {
-  const itemEl = document.createElement("li");
+const createImgEl = (imagesEl) => {
+  return imagesEl
+    .map(
+      ({ url, alt }) =>
+        `<li class='item'><img src=${url} alt=${alt} width='300' height='200'/></li>`
+    )
+    .join("");
+};
 
-  listEl.appendChild(itemEl);
-  const imageEl = document.createElement("img");
-  itemEl.appendChild(imageEl);
-  imageEl.src = `${images[i].url}`;
-  imageEl.alt = `${images[i].alt}`;
+const newImgEl = createImgEl(images);
+listEl.insertAdjacentHTML("afterbegin", newImgEl);
 
-  // Styles
-  itemEl.classList = "item";
-  itemEl.style.width = "324px";
-  itemEl.style.display = "block";
-  itemEl.style.borderRadius = "20px";
-  itemEl.style.listStyle = "none";
-  itemEl.style.marginBottom = "15px";
-  itemEl.style.border = "2px solid red";
-  imageEl.width = 320;
-  imageEl.style.display = "block";
-  imageEl.style.borderRadius = "18px";
-}
-console.log(listEl);
+// for (let i = 0; i < images.length; i += 1) {
+//   const itemEl = document.createElement("li");
+
+//   listEl.appendChild(itemEl);
+//   const imageEl = document.createElement("img");
+//   itemEl.appendChild(imageEl);
+//   imageEl.src = `${images[i].url}`;
+//   imageEl.alt = `${images[i].alt}`;
+
+//   // Styles
+//   itemEl.classList = "item";
+//   itemEl.style.width = "324px";
+//   itemEl.style.display = "block";
+//   itemEl.style.borderRadius = "20px";
+//   itemEl.style.listStyle = "none";
+//   itemEl.style.marginBottom = "15px";
+//   itemEl.style.border = "2px solid red";
+//   imageEl.width = 320;
+//   imageEl.style.display = "block";
+//   imageEl.style.borderRadius = "18px";
+// }
+// console.log(listEl);
