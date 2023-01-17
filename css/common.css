@@ -29,10 +29,10 @@ button {
   gap: 20px;
   list-style: none;
 }
-.item {
+/* .item {
   border: 2px solid red;
   border-radius: 10%;
-}
+} */
 img {
   display: block;
   border-radius: 9%;
